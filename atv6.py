@@ -1,49 +1,38 @@
+numero1= int (input("digite o primeiro numero: "))
+numero2= int(input("digite o segundo numero: "))
 
-def par_ou_impar(numero):
-    if numero % 2 == 0:
-        return "par"
-    else:
-        return "ímpar"
+operacao = input("qual operacao deseja fazer:  +  , - , * , / : ")
 
 
-def positivo_ou_negativo(numero):
-    if numero >= 0:
-        return "positivo"
-    else:
-        return "negativo"
+if operacao == "+": 
+   resultado = numero1 + numero2
+   print("O Resultado é: ", resultado)
+
+elif operacao == "-":
+   resultado = numero1 - numero2
+   print("O Resultado é: ", resultado)
+
+elif operacao == "*":
+   resultado == numero1 * numero2
+   print("O Resultado é: ", resultado)
+
+elif operacao == "/":
+   resultado == numero1 / numero2
+   print("O Resultado é: ", resultado)
+
+else: 
+   print("coloque algo")
 
 
-def inteiro_ou_decimal(numero):
-    if numero.is_integer():
-        return "inteiro"
-    else:
-        return "decimal"
-
-
-numero1 = float(input("Digite o primeiro número: "))
-numero2 = float(input("Digite o segundo número: "))
-
-
-operacao = input("Escolha a operação (soma, subtração, multiplicação, divisão): ")
-
-
-if operacao == "soma":
-    resultado = numero1 + numero2
-elif operacao == "subtração":
-    resultado = numero1 - numero2
-elif operacao == "multiplicação":
-    resultado = numero1 * numero2
-elif operacao == "divisão":
-    if numero2 == 0:
-        print("Erro! Divisão por zero.")
-        resultado = None
-    else:
-        resultado = numero1 / numero2
+if resultado < 0:
+  print("esse numero e negativo")
 else:
-    print("Operação inválida")
-    resultado = None
+   print("esse numero e positivo")
 
-if resultado is not None:
-    print("Resultado da operação: ", resultado)
-    print("O número " , resultado ,  " é ",  par_ou_impar(resultado), {positivo_ou_negativo(resultado)} , "e" , {inteiro_ou_decimal(resultado)})
+if "." in str  (resultado):
+   print ("o numero e decimal")
 
+if resultado % 2 == 0: 
+   print ("numero par")
+else:
+   print ("numero impar")
