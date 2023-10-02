@@ -18,23 +18,5 @@ print(dados_alunos.keys)
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-#for nomes, idades, notas in zip(dados_alunos["nomes"], dados_alunos["idades"], dados_alunos["notas"]):
-   # print(f"nome: {nomes} - idade:{idades} - nota: {notas}")
+for nomes, idades, notas in zip(dados_alunos["nomes"], dados_alunos["idades"], dados_alunos["notas"]):
+ print(f"nome: {nomes} - idade:{idades} - nota: {notas}")
