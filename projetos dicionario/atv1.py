@@ -1,19 +1,15 @@
-# Inicializa um dicionário vazio para armazenar as tarefas
 tarefas = {}
 
-# Função para adicionar uma tarefa à lista
 def adicionar_tarefa():
     tarefa = input("Digite a tarefa que deseja adicionar: ")
-    tarefas[tarefa] = False  # False indica que a tarefa não foi concluída
+    tarefas[tarefa] = False 
 
-# Função para listar as tarefas
 def listar_tarefas():
     print("Lista de tarefas:")
     for tarefa, concluida in tarefas.items():
         status = "Concluída" if concluida else "Não Concluída"
         print(f"- {tarefa} ({status})")
 
-# Função para marcar uma tarefa como concluída
 def marcar_tarefa_concluida():
     tarefa = input("Digite a tarefa que deseja marcar como concluída: ")
     if tarefa in tarefas:
@@ -22,7 +18,6 @@ def marcar_tarefa_concluida():
     else:
         print(f"A tarefa '{tarefa}' não foi encontrada na lista.")
 
-# Loop principal do programa
 while True:
    menu = '''("\nOpções:")
    ("1. Adicionar tarefa")
@@ -40,6 +35,6 @@ while True:
     elif opcao == "3":
         marcar_tarefa_concluida()
     elif opcao == "4":
-        break  # Sai do programa
+        break  
     else:
         print("Opção inválida. Por favor, digite um número válido.")

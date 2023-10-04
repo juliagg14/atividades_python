@@ -1,19 +1,20 @@
-print("------------alunos-----------")
+# Exercício 1: Contagem de Palavras com Lista de Frases
+'''Dado um dicionário de informações de alunos, escreva um programa que 
+filtre os alunos que têm uma nota superior a 85 e crie um novo dicionário 
+com esses alunos.'''
 
-alunos = {
-"julia": 85,
-"lucas": 90,
-"victor":80,
-"joao": 82
+
+dados_alunos = {
+    "joao" : 80,
+    "julia": 90,
+    "carol": 85,
+    "victor": 79
 }
-print(alunos)
-    
-print("------------aprovados-----------")
 
 aprovados = {}
 
-for nomes, notas in alunos.items():
- if notas >= 85:
-  aprovados[nomes]= notas
- 
+for nome, nota in dados_alunos.items():
+  if nota >=85:
+    aprovados[nome] = nota
+
 print(aprovados)
